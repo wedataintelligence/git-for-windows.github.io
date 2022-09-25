@@ -19,16 +19,20 @@
     "github"
   ],
   "scripts": {
-    "test": "grunt"
+    "test": "grunt",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
-    "grunt": "~0.4.2",
-    "grunt-md2html": "~0.2.1",
-    "grunt-contrib-connect": "~0.8.0",
-    "grunt-contrib-cssmin": "~0.10.0",
-    "grunt-contrib-uglify": "~0.6.0"
+    "grunt": "~1.5.3",
+    "grunt-md2html": "~0.6.0",
+    "grunt-contrib-connect": "~0.11.0",
+    "grunt-contrib-cssmin": "~2.2.0",
+    "grunt-contrib-uglify": "~4.0.1",
+    "@snyk/protect": "latest"
   },
   "engines": {
     "node": ">=0.8.0"
-  }
+  },
+  "snyk": true
 }
